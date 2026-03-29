@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                echo 'Cloning repository...'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Test') {
+            steps {
+                bat 'python tests/test.py'
+            }
+        }
+
+        stage('Build Complete') {
+            steps {
+                echo 'Build Successful 🚀'
+            }
+        }
+    }
+}
