@@ -22,6 +22,7 @@ pipeline {
             steps {
                 bat 'python tests/test.py'
             }
+        }
         stage('Build Complete') {
             steps {
                 echo 'Build Successful 🚀'
