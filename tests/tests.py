@@ -1,1 +1,1 @@
-print("CI Pipeline is  working successfully 🚀")
+print("CI Pipeline is working successfully 🚀")
