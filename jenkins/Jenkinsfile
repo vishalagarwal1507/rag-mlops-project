@@ -13,13 +13,15 @@ pipeline {
                 bat 'pip install -r requirements.txt'
             }
         }
-
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
         stage('Run Test') {
             steps {
                 bat 'python tests/test.py'
             }
-        }
-
         stage('Build Complete') {
             steps {
                 echo 'Build Successful 🚀'
