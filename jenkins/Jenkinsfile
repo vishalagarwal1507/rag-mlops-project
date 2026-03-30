@@ -15,12 +15,12 @@ pipeline {
         }
         stage('Check Python') {
             steps {
-                bat '"C:\\Users\\Vishal\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" --version'
+                bat '"C:\\Users\\visha\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" --version'
             }
         }
         stage('Run Test') {
             steps {
-                bat '"C:\\Users\\Vishal\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" tests/test.py'
+                bat '"C:\\Users\\visha\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" tests/test.py'
             }
         }
         stage('Build Complete') {
